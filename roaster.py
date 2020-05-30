@@ -10,7 +10,7 @@ if len(argv) != 2:
     exit(1)
 
 people = db.execute("SELECT first, middle, last, birth FROM students WHERE house = ? ORDER BY last, first", argv[1] )
-# query the students table in the students.db database for all of the students in the specified house.
+# query the students table in the students.db database for all of the students in the specified house and print these.
 for person in people:
     if person['middle'] == None:
         print(f"{person['first']} {person['last']}, born {person['birth']}")
