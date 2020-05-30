@@ -19,9 +19,8 @@ with open(argv[1], "r") as inputfile:
     # add each entry to the list name , house,  birth
     for row in reader:
         char_list.append(row)
-    # print all names.
+    # for each entry in char_list row[0] is the two or three names, split splits these into individual strings. [1] is the house [2] is the birth year.
     for row in char_list:
-        # if to work out if names have a middle name or not.
         name = row[0].split(' ')
         house = row[1]
         birth = row[2]
